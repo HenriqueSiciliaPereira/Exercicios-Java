@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class SomaImpares {
+
+    
+    public static void main(String[] args) {
+      
+        System.out.println("##Programa para somar apenas os números impares##");
+        
+        int N,i;
+        
+        Scanner teclado = new Scanner(System.in);
+        
+        System.out.println("Quantos números deseja informar? ");
+        N = teclado.nextInt();
+        
+        int[] vet = new int [N];
+       
+        int impares=0;
+        for (i=0; i<N; i++){
+            System.out.println("Digite o número: ");
+            vet[i] = teclado.nextInt();
+            if(vet[i]%2 == 1)
+                impares=impares+vet[i];
+            
+            teclado.close();
+        }
+        
+        
+        System.out.println("A soma dos números impares são " + impares);
+        
+    }
+    
+}
