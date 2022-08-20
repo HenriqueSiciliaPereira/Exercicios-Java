@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class Matrizes {
+
+    
+    public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner teclado = new Scanner(System.in);
+        
+        int M, N;
+        System.out.print("Quantas linhas vai ter a matriz? ");
+        M = teclado.nextInt();
+        
+        System.out.println("Quantas colunas vai ter a matriz? ");
+        N = teclado.nextInt();
+        
+        int[][] mat = new int[M][N];
+        
+        for(int i = 0; i < M; i++){
+            for(int j = 0; j < N; j++){
+                System.out.print("Elemento [" + i + "," + j + "]:");
+                mat[i][j] = teclado.nextInt();
+                
+                        
+            }
+        }
+        
+        System.out.println();
+        System.out.println("Matriz digitada: ");
+        for(int i = 0; i < M; i++){
+            for( int j = 0; j < N; j++){
+                System.out.print(mat[i][j] + " ");
+            } 
+            System.out.println();
+        
+        
+        
+        
+        teclado.close();
+        }
+    }
+}
