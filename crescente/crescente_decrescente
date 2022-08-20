@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class Crescente {
+
+    
+    public static void main(String[] args) {
+       
+        Scanner teclado = new Scanner(System.in);
+        
+        int x, y;
+        
+        System.out.println("Digite dois números: ");
+        x = teclado.nextInt();
+        y = teclado.nextInt();
+        
+        while (x != y){
+            if (x < y){
+                System.out.println("Crescente");
+                 }
+            else {
+                System.out.println("Decrescente");
+            }
+            System.out.println("DIgite outros dois números:");
+            x = teclado.nextInt();
+            y = teclado.nextInt();
+        }
+        
+        teclado.close();
+    }
+    
+}
