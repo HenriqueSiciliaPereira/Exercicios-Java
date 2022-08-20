@@ -1,0 +1,15 @@
+public class Repeticao2 {
+
+    
+    public static void main(String[] args) {
+        
+        double cc = 0;
+        do{
+            // do - faça
+            System.out.println("Cambalhota");
+            cc++;
+        } while (cc<4);
+        // while - até
+    }
+    
+}
