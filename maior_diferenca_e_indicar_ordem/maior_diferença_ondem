@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class maior_menor {
+	public static void main(String[] args) {
+		
+		// ENTRADA DE DADOS COM SCANNER
+		Scanner teclado = new Scanner(System.in);
+		//SAIDA DE DADOS
+		System.out.print("Quantidade de números que deseja digitar: ");
+		int N = teclado.nextInt();
+		//USANDO IF
+		if (N > 0) {
+			//CRIANDO O VETOR E ALOCANDO O "N"
+			int[] vetor = new int[N];
+			//USANDO O FOR
+			for (int i = 0; i < N; i++) {
+				System.out.println("Digite o número: ");
+				vetor[i] = teclado.nextInt();
+			}
+			System.out.println();
+			System.out.println(maiorDiferenca(vetor));
+			System.out.println(ordemCrescente(vetor));
+			
+			teclado.close();
+		}
+	}
+
+	//CRIANDO PARA A MAIOR DIFERENÇA
+	public static int maiorDiferenca(int vetor[]) {
+		int maior = vetor[0], menor = vetor[0];
+		for (int i = 1; i < vetor.length; i++) {
+			if (vetor[i] > maior) {
+				maior = vetor[i];
+			}
+			if (vetor[i] < menor) {
+				menor = vetor[i];
+			}
+		}
+		return maior - menor;
+	}
+
+	//CRIANDO PARA ORDEM CRESCENTE (COMO É TRUE OR FALSE) USAR O BOOLEAN
+	public static boolean ordemCrescente(int vetor[]) {
+			for (int i = 1; i < vetor.length; i++) {
+				if (vetor[i] < vetor[i - 1]) {
+			return false;
+				}
+			}
+			return true;
+			
+			
+	}
+}
+
