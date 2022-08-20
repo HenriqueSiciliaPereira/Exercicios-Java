@@ -1,0 +1,20 @@
+public class Repetição1 {
+
+    
+    public static void main(String[] args) {
+       
+        double cc = 0;
+        while (cc<10){
+              cc++;
+              if(cc == 5 || cc == 7 ||cc == 9){
+                  continue;
+              }
+              if (cc == 7) {
+                  break;
+              }
+            System.out.println("Cambalhota " + cc);
+            
+        }
+    }
+    
+}
